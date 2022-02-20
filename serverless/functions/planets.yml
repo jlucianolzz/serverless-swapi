@@ -1,0 +1,35 @@
+handler: src/controller/planet.handler
+name: planet-management
+description: planet management
+events:
+  - http:
+      path: api/planets/{id}
+      method: get
+      request:
+        parameters:
+          paths:
+            id: true
+      cors:
+        origin: "*"
+        headers:
+          - Content-Type
+          - Access-Control-Allow-Origin
+          - Access-Control-Allow-Credentials
+  - http:
+      path: api/planets
+      method: get
+      cors:
+        origin: "*"
+        headers:
+          - Content-Type
+          - Access-Control-Allow-Origin
+          - Access-Control-Allow-Credentials
+  - http:
+      path: api/planets
+      method: post
+      cors:
+        origin: "*"
+        headers:
+          - Content-Type
+          - Access-Control-Allow-Origin
+          - Access-Control-Allow-Credentials

@@ -1,0 +1,26 @@
+handler: src/controller/species.handler
+name: species-management
+description: species management
+events:
+  - http:
+      path: api/species/{id}
+      method: get
+      request:
+        parameters:
+          paths:
+            id: true
+      cors:
+        origin: "*"
+        headers:
+          - Content-Type
+          - Access-Control-Allow-Origin
+          - Access-Control-Allow-Credentials
+  - http:
+      path: api/species
+      method: get
+      cors:
+        origin: "*"
+        headers:
+          - Content-Type
+          - Access-Control-Allow-Origin
+          - Access-Control-Allow-Credentials

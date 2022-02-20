@@ -1,0 +1,130 @@
+{
+  "openapi": "3.0.0",
+  "servers": [
+    {
+      "url": "http://localhost.3000",
+      "description": "",
+      "variables": {}
+    }
+  ],
+  "info": {
+    "version": "1.0.0",
+    "title": "SWAPI",
+    "description": "Api para la gestión de planetas y especies",
+    "termsOfService": "",
+    "contact": {},
+    "license": {
+      "name": ""
+    }
+  },
+  "paths": {
+    "/planets": {
+      "get": {
+        "summary": "Listar",
+        "operationId": "Listar",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "tags": [
+          "planets"
+        ]
+      },
+      "post": {
+        "summary": "Registrar",
+        "operationId": "Registrar",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "text/plain": {
+              "schema": {
+                "type": "string",
+                "example": {
+                  "nombre": "Tatooine",
+                  "periodo_rotacion": "23",
+                  "periodo_orbita": "304",
+                  "diametro": "10465",
+                  "clima": "arid",
+                  "gravedad": "1 standard",
+                  "terreno": "desert",
+                  "superficie_agua": "1",
+                  "poblacion": "200000",
+                  "residentes": [
+                    "https://swapi.py4e.com/api/people/1/"
+                  ],
+                  "peliculas": [
+                    "https://swapi.py4e.com/api/films/3/",
+                    "https://swapi.py4e.com/api/films/4/"
+                  ],
+                  "url": "/planets"
+                }
+              },
+              "example": "{\r\n    \"nombre\": \"Tatooine\",\r\n    \"periodo_rotacion\": \"23\",\r\n    \"periodo_orbita\": \"304\",\r\n    \"diametro\": \"10465\",\r\n    \"clima\": \"arid\",\r\n    \"gravedad\": \"1 standard\",\r\n    \"terreno\": \"desert\",\r\n    \"superficie_agua\": \"1\",\r\n    \"poblacion\": \"200000\",\r\n    \"residentes\": [\r\n        \"https://swapi.py4e.com/api/people/1/\"\r\n    ],\r\n    \"peliculas\": [\r\n        \"https://swapi.py4e.com/api/films/3/\",\r\n        \"https://swapi.py4e.com/api/films/4/\"\r\n    ],\r\n    \"url\": \"/planets\"\r\n}"
+            }
+          }
+        },
+        "tags": [
+          "planets"
+        ]
+      }
+    },
+    "/planets/5": {
+      "get": {
+        "summary": "Obtener por ID",
+        "operationId": "ObtenerporID",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "tags": [
+          "planets"
+        ]
+      }
+    },
+    "/species": {
+      "get": {
+        "summary": "Listar",
+        "operationId": "Listar0",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "tags": [
+          "species"
+        ]
+      }
+    },
+    "/species/1": {
+      "get": {
+        "summary": "Obtener por ID",
+        "operationId": "ObtenerporID1",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "tags": [
+          "species"
+        ]
+      }
+    }
+  }
+}

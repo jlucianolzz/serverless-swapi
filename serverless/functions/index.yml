@@ -1,0 +1,2 @@
+planets: ${file(./serverless/functions/planets.yml)}
+species: ${file(./serverless/functions/species.yml)}

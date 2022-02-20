@@ -1,0 +1,7 @@
+ENV: ${file(./serverless/environment/${opt:stage, 'development'}.yml):environment.NODE_ENV}
+DB_USERNAME: ${file(./serverless/environment/${opt:stage, 'development'}.yml):environment.DB_USERNAME}
+DB_PASSWORD: ${file(./serverless/environment/${opt:stage, 'development'}.yml):environment.DB_PASSWORD}
+DB_DATABASE: ${file(./serverless/environment/${opt:stage, 'development'}.yml):environment.DB_DATABASE}
+DB_HOST: ${file(./serverless/environment/${opt:stage, 'development'}.yml):environment.DB_HOST}
+
+SWAPI_URL: ${file(./serverless/environment/${opt:stage, 'development'}.yml):environment.SWAPI_URL}

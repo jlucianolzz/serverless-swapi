@@ -1,0 +1,30 @@
+{
+  "name": "aws-lambda-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "handler.js",
+  "scripts": {
+    "start": "sls offline",
+    "deploy": "sls deploy --stage development --verbose",
+    "test": "jest --coverage"
+  },
+  "keywords": [],
+  "author": "Joel Luciano",
+  "license": "ISC",
+  "dependencies": {
+    "joi": "^17.6.0",
+    "node-fetch": "^2.6.7",
+    "serverless-mysql": "^1.5.4"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.4.0",
+    "jest": "^27.5.1",
+    "serverless-offline": "^8.5.0"
+  },
+  "jest": {
+    "testTimeout": 5000,
+    "setupFiles": [
+      "./test/setEnv.js"
+    ]
+  }
+}

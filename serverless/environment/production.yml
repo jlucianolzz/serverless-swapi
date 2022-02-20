@@ -1,0 +1,7 @@
+environment:
+  NODE_ENV: ${opt:stage, 'production'}
+  DB_USERNAME: ""
+  DB_PASSWORD: ""
+  DB_DATABASE: ""
+  DB_HOST: ""
+  SWAPI_URL: "https://swapi.py4e.com/api"

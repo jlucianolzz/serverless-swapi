@@ -1,0 +1,15 @@
+service: aws-lambda-api-service
+frameworkVersion: "3"
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  stage: ${opt:stage, 'development'}
+  profile: user-deploy-aws
+  region: sa-east-1
+  environment: ${file(./serverless/environment/index.yml)}
+
+functions: ${file(./serverless/functions/index.yml)}
+
+plugins:
+  - serverless-offline
